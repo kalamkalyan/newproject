@@ -87,7 +87,7 @@ export default function Navbar() {
       <header
         className="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out bg-transparent"
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-[80px] md:h-[90px] lg:h-[70px] flex items-center justify-between overflow-visible">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-[64px] md:h-[70px] lg:h-[64px] flex items-center justify-between overflow-visible">
 
           {/* Logo */}
           <a
@@ -111,9 +111,6 @@ export default function Navbar() {
       transition-transform
       duration-300
       group-hover:scale-[1.02]
-      -mt-3
-      md:-mt-4
-      lg:-mt-2
     "
             />
           </a>
