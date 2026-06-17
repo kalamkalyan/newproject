@@ -12,12 +12,7 @@ export default function Hero() {
         
         {/* Left Side Column: Static Text (z-20 to overlay above image) */}
         <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start text-center lg:text-left z-20 relative py-12 md:py-16 lg:py-0">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-therallen-blue/5 border border-therallen-blue/10 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-therallen-blue" />
-            <span className="text-therallen-blue font-bold text-xs tracking-wider uppercase">
-              Therapeutics by Design
-            </span>
-          </div>
+
 
           <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold text-therallen-black leading-[1.15] mb-6 tracking-tight">
             Innovative Drug <br className="hidden lg:block" />

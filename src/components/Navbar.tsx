@@ -12,23 +12,24 @@ interface NavLink {
 }
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobileMenuOpen]);
 
   const navLinks: NavLink[] = [
     { name: 'Home', href: '/' },
-    { 
-      name: 'About Us', 
+    {
+      name: 'About Us',
       href: '/about-us',
       dropdown: [
         { name: 'Company Overview', href: '/about/overview' },
@@ -37,8 +38,8 @@ export default function Navbar() {
         { name: 'Milestones', href: '/about/milestones' }
       ]
     },
-    { 
-      name: 'Capabilities', 
+    {
+      name: 'Capabilities',
       href: '/capabilities',
       dropdown: [
         { name: 'Manufacturing', href: '/capabilities/manufacturing' },
@@ -47,8 +48,8 @@ export default function Navbar() {
         { name: 'Technology Platforms', href: '/capabilities/technology' }
       ]
     },
-    { 
-      name: 'Products', 
+    {
+      name: 'Products',
       href: '/products',
       dropdown: [
         { name: 'Products Overview', href: '/products/overview' },
@@ -59,8 +60,8 @@ export default function Navbar() {
     },
     { name: 'Partnering', href: '/partnering' },
     { name: 'Global Reach', href: '/global-reach' },
-    { 
-      name: 'Knowledge Hub', 
+    {
+      name: 'Knowledge Hub',
       href: '/knowledge-hub',
       dropdown: [
         { name: 'Blog and Articles', href: '/knowledge-hub/blog' },
@@ -84,12 +85,9 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${isScrolled
-            ? 'glassmorphism shadow-[0_4px_20px_rgba(0,87,217,0.04)]'
-            : 'bg-transparent'
-          }`}
+        className="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out bg-transparent"
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-[88px] flex items-center justify-between overflow-visible">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-[110px] md:h-[120px] lg:h-[88px] flex items-center justify-between overflow-visible">
 
           {/* Logo */}
           <a
@@ -99,20 +97,21 @@ export default function Navbar() {
             <Image
               src="/therellen_logo.png"
               alt="Therallen Logo"
-              width={600}
-              height={300}
+              width={800}
+              height={400}
               priority
               className="
-                h-16
-                md:h-20
-                lg:h-24
-                xl:h-28
-                w-auto
-                object-contain
-                transition-transform
-                duration-300
-                group-hover:scale-[1.02]
-              "
+      h-24
+      sm:h-28
+      md:h-32
+      lg:h-24
+      xl:h-28
+      w-auto
+      object-contain
+      transition-transform
+      duration-300
+      group-hover:scale-[1.02]
+    "
             />
           </a>
 
@@ -129,7 +128,7 @@ export default function Navbar() {
                     <span>{link.name}</span>
                     {hasDropdown && <ChevronDown size={12} className="opacity-70 group-hover:text-therallen-blue transition-colors" />}
                   </a>
-                  
+
                   {/* Underline effect */}
                   <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-therallen-blue transition-all duration-300 group-hover:w-full group-hover:left-0" />
 
@@ -173,7 +172,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-md lg:hidden"
+            className="fixed inset-0 z-40 lg:hidden overflow-hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <motion.div
@@ -185,7 +184,7 @@ export default function Navbar() {
                 damping: 25,
                 stiffness: 200,
               }}
-              className="absolute right-0 top-0 bottom-0 w-[85%] max-w-[400px] bg-white shadow-2xl p-8 flex flex-col justify-between overflow-y-auto"
+              className="absolute right-0 top-0 bottom-0 w-full bg-white p-8 flex flex-col justify-between overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="pt-20 pb-8">
@@ -207,14 +206,14 @@ export default function Navbar() {
                           >
                             <span>{link.name}</span>
                             {hasDropdown && (
-                              <ChevronDown 
-                                size={18} 
+                              <ChevronDown
+                                size={18}
                                 className={`text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180 text-therallen-blue' : ''}`}
                               />
                             )}
                           </a>
                         </motion.div>
-                        
+
                         {/* Sub links for mobile */}
                         {link.dropdown && isOpen && (
                           <div className="flex flex-col pl-4 border-l border-slate-100 gap-2 mt-1 mb-3">

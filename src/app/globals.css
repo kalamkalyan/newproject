@@ -83,7 +83,7 @@ html.lenis body {
 }
 
 /* Base Body Styles */
-body {
+html, body {
   background: var(--therallen-white);
   color: var(--therallen-black);
   overflow-x: hidden;
