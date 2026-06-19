@@ -47,36 +47,42 @@ export default function Innovation() {
       description: 'Expertise in pelletisation processes including extrusion-spheronisation, powder/solution layering, and fluid bed coating for controlled release systems.',
       icon: Layers,
       color: 'from-blue-500/10 to-cyan-500/10',
+      image: '/pellet_technologies.jpg',
     },
     {
       title: 'MUPS Development',
       description: 'Multi-Unit Particulate Systems (MUPS) formulation design engineered for consistent compression, preventing coating damage and ensuring uniform release profile.',
       icon: HelpCircle, // Customized for MUPS particulates
       color: 'from-cyan-500/10 to-blue-500/10',
+      image: '/mups_development.jpg',
     },
     {
       title: 'Patent Aware Formulations',
       description: 'IP-guided formulation development to create non-infringing pathways, ensuring solid regulatory positions in global high-entry barrier markets.',
       icon: Shield,
       color: 'from-blue-500/10 to-indigo-500/10',
+      image: '/patent_aware_formulations.jpg',
     },
     {
       title: 'Nitrosamine-Free Products',
       description: 'State-of-the-art impurity profiling and raw material risk management to guarantee nitrosamine-free and genotoxic-impurity-safe formulations.',
       icon: Sparkles,
       color: 'from-cyan-500/10 to-teal-500/10',
+      image: '/nitrosamine_free_lab.png',
     },
     {
       title: 'Analytical Validation',
       description: 'Method development, validation, and stability study setups conforming to international ICH guidelines, ensuring global compliance.',
       icon: Beaker,
       color: 'from-indigo-500/10 to-blue-500/10',
+      image: '/analytical_validation.png',
     },
     {
       title: 'Scale-Up Expertise',
       description: 'Seamless technology transfer from laboratory scale to pilot batches and final commercial scale-up under rigorous cGMP environments.',
       icon: TrendingUp,
       color: 'from-teal-500/10 to-cyan-500/10',
+      image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80&w=800',
     },
   ];
 
@@ -157,14 +163,27 @@ export default function Innovation() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isCardsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative flex flex-col p-8 rounded-3xl bg-white border border-slate-100/90 shadow-[0_4px_30px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_40px_rgba(0,87,217,0.05)] hover:-translate-y-1.5 transition-all duration-500 ease-out overflow-hidden"
+                className="group relative flex flex-col p-6 rounded-3xl bg-white border border-slate-100/90 shadow-[0_4px_30px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_40px_rgba(0,87,217,0.05)] hover:-translate-y-1.5 transition-all duration-500 ease-out overflow-hidden"
               >
                 {/* Micro Gradient Background Glow on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-therallen-blue/[0.01] to-therallen-cyan/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl ${cap.color} rounded-bl-full filter blur-md opacity-50 group-hover:opacity-85 transition-all duration-500 group-hover:scale-110`} />
 
-                <div className="relative flex items-center justify-center w-12 h-12 rounded-2xl bg-therallen-blue/5 border border-therallen-blue/10 text-therallen-blue mb-6 group-hover:bg-therallen-blue group-hover:text-white transition-all duration-500 ease-out">
-                  <IconComponent size={24} className="transition-transform duration-500 group-hover:rotate-6" />
+                {/* Card Image Cover */}
+                <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-6 bg-slate-50 border border-slate-100">
+                  <img
+                    src={cap.image}
+                    alt={cap.title}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  {/* Subtle dark gradient overlay for hover/focus contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-70" />
+                  
+                  {/* Floating Icon inside image container (Glassmorphic) */}
+                  <div className="absolute bottom-3 left-3 flex items-center justify-center w-10 h-10 rounded-xl bg-white/90 backdrop-blur-xs border border-white/20 text-therallen-blue shadow-[0_4px_12px_rgba(0,0,0,0.1)] group-hover:bg-therallen-blue group-hover:text-white transition-all duration-500 ease-out">
+                    <IconComponent size={20} className="transition-transform duration-500 group-hover:rotate-6" />
+                  </div>
                 </div>
 
                 <h3 className="relative text-xl font-bold text-therallen-black mb-3 group-hover:text-therallen-blue transition-colors duration-300">
