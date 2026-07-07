@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --therallen-blue: #0057D9;
-  --therallen-cyan: #00C8FF;
+  --therallen-blue: #0F6E56;
+  --therallen-cyan: #12857D;
   --therallen-black: #111111;
   --therallen-white: #FFFFFF;
-  --therallen-light: #F8FBFF;
+  --therallen-light: #E1F5EE;
   
-  --background: #FFFFFF;
-  --foreground: #111111;
+  --background: #E1F5EE;
+  --foreground: #475569;
 }
 
 @theme inline {
@@ -52,7 +52,7 @@
   background: var(--therallen-white);
 }
 ::-webkit-scrollbar-thumb {
-  background: #D0E0FC;
+  background: #D3EAE2;
   border-radius: 4px;
   border: 2px solid var(--therallen-white);
 }
@@ -84,8 +84,8 @@ html.lenis body {
 
 /* Base Body Styles */
 html, body {
-  background: var(--therallen-white);
-  color: var(--therallen-black);
+  background: #E1F5EE;
+  color: #475569;
   overflow-x: hidden;
 }
 
@@ -94,7 +94,7 @@ html, body {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 87, 217, 0.08);
+  border: 1px solid rgba(15, 110, 86, 0.08);
 }
 
 .mask-radial-desktop {
@@ -117,3 +117,25 @@ html, body {
   color: white;
 }
 
+/* Global Heading Color Overrides (#0F6E56) */
+h1:not(.text-white):not(.text-transparent):not(.text-inherit),
+h2:not(.text-white):not(.text-transparent):not(.text-inherit),
+h3:not(.text-white):not(.text-transparent):not(.text-inherit),
+h4:not(.text-white):not(.text-transparent):not(.text-inherit),
+h5:not(.text-white):not(.text-transparent):not(.text-inherit),
+h6:not(.text-white):not(.text-transparent):not(.text-inherit) {
+  color: #0F6E56 !important;
+}
+
+/* Global Page Background Overrides (#E1F5EE) */
+main.bg-white,
+section.bg-white,
+section#partnerships {
+  background-color: #E1F5EE !important;
+  background-image: none !important;
+}
+
+/* Global Paragraph Color Overrides (#475569) */
+p:not(.text-white):not(.text-slate-100):not(.text-slate-200):not(.text-slate-300):not(.text-slate-400):not(.text-slate-50):not(.text-slate-500) {
+  color: #475569 !important;
+}

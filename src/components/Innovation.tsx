@@ -46,21 +46,21 @@ export default function Innovation() {
       title: 'Pellet Technologies',
       description: 'Expertise in pelletisation processes including extrusion-spheronisation, powder/solution layering, and fluid bed coating for controlled release systems.',
       icon: Layers,
-      color: 'from-blue-500/10 to-cyan-500/10',
+      color: 'from-therallen-blue/10 to-cyan-500/10',
       image: '/pellet_technologies.jpg',
     },
     {
       title: 'MUPS Development',
       description: 'Multi-Unit Particulate Systems (MUPS) formulation design engineered for consistent compression, preventing coating damage and ensuring uniform release profile.',
       icon: HelpCircle, // Customized for MUPS particulates
-      color: 'from-cyan-500/10 to-blue-500/10',
+      color: 'from-cyan-500/10 to-therallen-blue/10',
       image: '/mups_development.jpg',
     },
     {
       title: 'Patent Aware Formulations',
       description: 'IP-guided formulation development to create non-infringing pathways, ensuring solid regulatory positions in global high-entry barrier markets.',
       icon: Shield,
-      color: 'from-blue-500/10 to-indigo-500/10',
+      color: 'from-therallen-blue/10 to-indigo-500/10',
       image: '/patent_aware_formulations.jpg',
     },
     {
@@ -74,7 +74,7 @@ export default function Innovation() {
       title: 'Analytical Validation',
       description: 'Method development, validation, and stability study setups conforming to international ICH guidelines, ensuring global compliance.',
       icon: Beaker,
-      color: 'from-indigo-500/10 to-blue-500/10',
+      color: 'from-indigo-500/10 to-therallen-blue/10',
       image: '/analytical_validation.png',
     },
     {
