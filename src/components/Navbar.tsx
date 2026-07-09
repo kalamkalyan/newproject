@@ -43,9 +43,9 @@ export default function Navbar() {
       href: '/capabilities',
       dropdown: [
         { name: 'Manufacturing', href: '/capabilities/manufacturing' },
-        { name: 'Research and Development', href: '/capabilities/rd' },
+        { name: 'Research and Development', href: '/capabilities/research-development' },
         { name: 'Quality Assurance', href: '/capabilities/quality-assurance' },
-        { name: 'Technology Platforms', href: '/capabilities/technology' }
+        { name: 'Technology Platforms', href: '/capabilities/technology-platforms' }
       ]
     },
     {
@@ -85,7 +85,8 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out bg-transparent"
+        className="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out bg-white border-b-0 shadow-none"
+        style={{ borderBottom: 'none', boxShadow: 'none' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 h-[64px] md:h-[70px] lg:h-[64px] flex items-center justify-between overflow-visible">
 
@@ -162,6 +163,8 @@ export default function Navbar() {
             {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
+        {/* Overlay stripe to cover unexpected artifacts under the fixed header */}
+        <div className="absolute left-0 right-0 bottom-0 h-3 bg-white pointer-events-none" />
       </header>
 
       {/* Mobile Menu */}

@@ -12,8 +12,8 @@ export default function Partnerships() {
     },
     {
       year: '2018',
-      title: 'cGMP Manufacturing',
-      desc: 'Commissioning of cGMP-compliant manufacturing facility in Nalagarh.',
+      title: 'CGMP Manufacturing',
+      desc: 'Commissioning of CGMP-compliant manufacturing facility in Nalagarh.',
     },
     {
       year: '2021',
@@ -205,7 +205,7 @@ export default function Partnerships() {
                     {benefit.title}
                   </h4>
                 </div>
-                
+
                 <p className="text-slate-500 text-sm leading-relaxed relative z-10">
                   {benefit.description}
                 </p>
