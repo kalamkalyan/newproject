@@ -30,7 +30,7 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     {
       name: 'About Us',
-      href: '/about-us',
+      href: '#',
       dropdown: [
         { name: 'Company Overview', href: '/about/overview' },
         { name: 'Leadership and Team', href: '/about/leadership' },
@@ -40,7 +40,7 @@ export default function Navbar() {
     },
     {
       name: 'Capabilities',
-      href: '/capabilities',
+      href: '#',
       dropdown: [
         { name: 'Manufacturing', href: '/capabilities/manufacturing' },
         { name: 'Research and Development', href: '/capabilities/research-development' },
@@ -50,7 +50,7 @@ export default function Navbar() {
     },
     {
       name: 'Products',
-      href: '/products',
+      href: '#',
       dropdown: [
         { name: 'Products Overview', href: '/products/overview' },
         { name: 'Pre-Formulation Intermediates', href: '/products/pre-formulation' },
@@ -62,7 +62,7 @@ export default function Navbar() {
     { name: 'Global Reach', href: '/global-reach' },
     {
       name: 'Knowledge Hub',
-      href: '/knowledge-hub',
+      href: '#',
       dropdown: [
         { name: 'Blog and Articles', href: '/knowledge-hub/blog' },
         { name: 'White Papers and Downloads', href: '/knowledge-hub/white-papers' },
@@ -96,23 +96,22 @@ export default function Navbar() {
             className="relative z-50 flex items-center group"
           >
             <Image
-              src="/therellen_logo.png"
+              src="/image.png"
               alt="Therallen Logo"
-              width={800}
-              height={400}
+              width={1024}
+              height={338}
               priority
               className="
-      h-24
-      sm:h-28
-      md:h-32
-      lg:h-24
-      xl:h-28
-      w-auto
-      object-contain
-      transition-transform
-      duration-300
-      group-hover:scale-[1.02]
-    "
+                h-9
+                sm:h-10
+                md:h-11
+                lg:h-10
+                w-auto
+                object-contain
+                transition-transform
+                duration-300
+                group-hover:scale-[1.02]
+              "
             />
           </a>
 
@@ -124,6 +123,7 @@ export default function Navbar() {
                 <div key={link.name} className="relative group py-2">
                   <a
                     href={link.href}
+                    onClick={(e) => hasDropdown && e.preventDefault()}
                     className="flex items-center gap-1 text-therallen-black font-semibold text-[13px] xl:text-[14px] transition-colors duration-300 hover:text-therallen-blue py-1"
                   >
                     <span>{link.name}</span>

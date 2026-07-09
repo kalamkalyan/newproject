@@ -32,7 +32,7 @@ export default function Hero() {
           <a
             href={BROCHURE.href}
             download={BROCHURE.filename}
-            className="inline-flex items-center justify-center gap-2 bg-therallen-blue hover:bg-opacity-95 text-white font-semibold px-6 py-3 rounded-full shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 bg-therallen-blue hover:bg-opacity-95 text-white font-semibold px-6 py-3 rounded-full shadow-lg shadow-therallen-blue/10 hover:shadow-therallen-blue/20 hover:-translate-y-0.5 transition-all duration-300"
           >
             <Download size={18} />
             Download Brochure
@@ -51,7 +51,7 @@ export default function Hero() {
                 alt="Therallen Drug Delivery Illustration"
                 width={1000}
                 height={1000}
-                className="w-full h-auto object-contain filter brightness-[1.05] contrast-[1.02]"
+                className="w-full h-auto object-contain filter brightness-[1.05] contrast-[1.02] mix-blend-multiply"
                 priority
               />
             </div>
