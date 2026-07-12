@@ -69,7 +69,14 @@ export default function Navbar() {
         { name: 'FAQs', href: '/knowledge-hub/faqs' }
       ]
     },
-    { name: 'Careers', href: '/careers' },
+    {
+      name: 'Careers',
+      href: '#',
+      dropdown: [
+        { name: 'Life at Therallen', href: '/careers/life-at-therallen' },
+        { name: 'Current Openings', href: '/careers/current-openings' }
+      ]
+    },
     { name: 'Contact', href: '/#contact' }
   ];
 
