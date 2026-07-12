@@ -141,7 +141,7 @@ export default function LifeAtTherallen() {
               style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 100%, 3% 100%)' }}
             >
               <Image
-                src="/vision_mission_cover.jpg"
+                src="/life_at_therallen_cover.jpg"
                 alt="Life at Therallen Cover"
                 fill
                 sizes="(max-width: 768px) 60vw, 55vw"

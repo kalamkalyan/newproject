@@ -22,6 +22,14 @@ export async function register() {
         src: path.join(artifactsDir, 'media__1783531809438.jpg'),
         dest: path.join(publicDir, 'milestones_cover.jpg'),
       },
+      {
+        src: 'C:\\Users\\User\\.gemini\\antigravity-ide\\brain\\bbd65f1e-5b4e-4bca-abf2-8af26bf1d870\\media__1783874208161.jpg',
+        dest: path.join(publicDir, 'life_at_therallen_cover.jpg'),
+      },
+      {
+        src: 'C:\\Users\\User\\.gemini\\antigravity-ide\\brain\\bbd65f1e-5b4e-4bca-abf2-8af26bf1d870\\media__1783874208162.jpg',
+        dest: path.join(publicDir, 'current_openings_cover.jpg'),
+      },
     ];
 
     for (const { src, dest } of copies) {

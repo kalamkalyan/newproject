@@ -89,7 +89,7 @@ export default function CurrentOpenings() {
               style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 100%, 3% 100%)' }}
             >
               <Image
-                src="/leadership_cover.jpg"
+                src="/current_openings_cover.jpg"
                 alt="Current Openings Cover"
                 fill
                 sizes="(max-width: 768px) 60vw, 55vw"
