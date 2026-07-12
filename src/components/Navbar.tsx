@@ -52,7 +52,6 @@ export default function Navbar() {
       name: 'Products',
       href: '#',
       dropdown: [
-        { name: 'Products Overview', href: '/products/overview' },
         { name: 'Pre-Formulation Intermediates', href: '/products/pre-formulation' },
         { name: 'Finished Dose Formulations', href: '/products/finished-dose' },
         { name: 'Therapeutic Areas', href: '/products/therapeutic-areas' }
