@@ -25,24 +25,24 @@ import Footer from '@/components/Footer';
 // Define regions and countries data
 const regions = [
   { id: 'all', name: 'All Markets' },
-  { id: 'americas', name: 'Americas' },
+  { id: 'america', name: 'America' },
   { id: 'europe', name: 'Europe' },
   { id: 'apac', name: 'Asia Pacific' },
   { id: 'mea', name: 'Middle East & Africa' }
 ];
 
 const countries = [
-  { name: 'Mexico', region: 'americas' },
-  { name: 'Brazil', region: 'americas' },
-  { name: 'Colombia', region: 'americas' },
-  { name: 'Argentina', region: 'americas' },
-  { name: 'Costa Rica', region: 'americas' },
-  { name: 'Guatemala', region: 'americas' },
-  { name: 'Paraguay', region: 'americas' },
-  { name: 'Bolivia', region: 'americas' },
-  { name: 'Ecuador', region: 'americas' },
-  { name: 'Dominican Republic', region: 'americas' },
-  { name: 'Guyana', region: 'americas' },
+  { name: 'Mexico', region: 'america' },
+  { name: 'Brazil', region: 'america' },
+  { name: 'Colombia', region: 'america' },
+  { name: 'Argentina', region: 'america' },
+  { name: 'Costa Rica', region: 'america' },
+  { name: 'Guatemala', region: 'america' },
+  { name: 'Paraguay', region: 'america' },
+  { name: 'Bolivia', region: 'america' },
+  { name: 'Ecuador', region: 'america' },
+  { name: 'Dominica República', region: 'america' },
+  { name: 'Guyana', region: 'america' },
   { name: 'Switzerland', region: 'europe' },
   { name: 'Russia', region: 'europe' },
   { name: 'Vietnam', region: 'apac' },
@@ -51,7 +51,8 @@ const countries = [
   { name: 'Bangladesh', region: 'apac' },
   { name: 'UAE', region: 'mea' },
   { name: 'Iran', region: 'mea' },
-  { name: 'Lebanon (Beirut)', region: 'mea' },
+  { name: 'Lebanon', region: 'mea' },
+  { name: 'Beirut', region: 'mea' },
   { name: 'Yemen', region: 'mea' },
   { name: 'Egypt', region: 'mea' }
 ];
