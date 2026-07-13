@@ -129,10 +129,10 @@ export default function GlobalReachClient() {
         </div>
 
         {/* Countries Grid */}
-        <div className="max-w-5xl mx-auto px-2 min-h-[180px] z-10 relative">
+        <div className="max-w-6xl mx-auto px-2 min-h-[180px] z-10 relative">
           <motion.div 
             layout 
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
           >
             <AnimatePresence mode="popLayout">
               {filteredCountries.map(country => (
@@ -143,20 +143,20 @@ export default function GlobalReachClient() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
-                  className="group relative rounded-2xl border border-slate-100 bg-white p-4 shadow-sm hover:shadow-md hover:border-[#12857D]/30 transition-all duration-300 flex items-center gap-3 cursor-pointer overflow-hidden"
+                  className="group relative rounded-3xl border border-slate-100 bg-white p-5 sm:p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#12857D]/30 transition-all duration-350 flex items-center gap-4 cursor-pointer overflow-hidden"
                 >
                   {/* Top right gradient accent */}
-                  <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-[#12857D]/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-[#12857D]/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
-                  <div className="w-8 h-8 rounded-lg bg-[#0F6E56]/5 text-[#0F6E56] group-hover:bg-[#0F6E56] group-hover:text-white flex items-center justify-center shrink-0 transition-colors duration-300">
-                    <MapPin size={13} className="group-hover:scale-115 transition-transform" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#0F6E56]/5 text-[#0F6E56] group-hover:bg-[#0F6E56] group-hover:text-white flex items-center justify-center shrink-0 transition-colors duration-300">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   
                   <div>
-                    <span className="text-slate-800 text-xs font-extrabold group-hover:text-[#0F6E56] transition-colors leading-tight block">
+                    <span className="text-slate-800 text-sm sm:text-base font-extrabold group-hover:text-[#0F6E56] transition-colors leading-tight block">
                       {country.name}
                     </span>
-                    <span className="text-[9px] text-slate-400 block font-bold capitalize mt-0.5">
+                    <span className="text-[10px] sm:text-xs text-slate-400 block font-bold capitalize mt-1">
                       {country.region === 'apac' 
                         ? 'Asia Pacific' 
                         : country.region === 'mea' 
