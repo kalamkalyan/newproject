@@ -60,7 +60,7 @@ export default function PreFormulationPage() {
                 }}
               >
                 <Image
-                  src="/pellet_technologies.jpg"
+                  src="/pre_formulation_cover_v2.jpg"
                   alt="Pre-Formulation Intermediates Cover"
                   fill
                   sizes="(max-width: 768px) 60vw, 55vw"

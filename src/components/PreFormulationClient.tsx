@@ -3,8 +3,15 @@
 import React, { useState } from 'react';
 import { Search, FileText, Settings, Info, Beaker } from 'lucide-react';
 
+interface GranuleItem {
+  name: string;
+  concentration: string;
+  dossier: string;
+  therapeutic?: string;
+}
+
 // Direct Compressible (DC) Granules data from PDF brochure
-const activeGranules = [
+const activeGranules: GranuleItem[] = [
   { name: 'Acetaminophen', concentration: '77%, 83% & 90%', dossier: 'Available' },
   { name: 'Ciprofloxacin', concentration: '65%', dossier: 'Not Available' },
   { name: 'Guaifenesin', concentration: '90% & 95%', dossier: 'Not Available' },
@@ -23,7 +30,7 @@ const activeGranules = [
   { name: 'Dapagliflozin IR & Metformin ER Granules', concentration: '5mg/1000mg; 10mg/1000mg, 5mg/500mg; 10mg/500mg', dossier: 'Not Available' }
 ];
 
-const pipelineGranules = [
+const pipelineGranules: GranuleItem[] = [
   { name: 'Semaglutide IR DC granules', concentration: 'Dosage Form Intermediate', dossier: 'Under Development', therapeutic: 'Anti Diabetic' },
   { name: 'Deucravacitinib DC Granules', concentration: 'Dosage Form Intermediate', dossier: 'Under Development', therapeutic: 'Plaque Psoriasis' }
 ];
@@ -39,7 +46,7 @@ export default function PreFormulationClient() {
       item.name.toLowerCase().includes(query) || 
       item.concentration.toLowerCase().includes(query) ||
       item.dossier.toLowerCase().includes(query) ||
-      ('therapeutic' in item && item.therapeutic.toLowerCase().includes(query))
+      (item.therapeutic && item.therapeutic.toLowerCase().includes(query))
     );
   };
 

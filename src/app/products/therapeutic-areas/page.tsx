@@ -60,7 +60,7 @@ export default function TherapeuticAreasPage() {
                 }}
               >
                 <Image
-                  src="/nitrosamine_free_lab.png"
+                  src="/therapeutic_areas_cover_v2.jpg"
                   alt="Therapeutic Areas Cover"
                   fill
                   sizes="(max-width: 768px) 60vw, 55vw"

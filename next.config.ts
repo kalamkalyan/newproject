@@ -26,6 +26,32 @@ for (const { src, dest } of coverImages) {
     console.error(`\x1b[31m✗ Failed to copy ${dest}:\x1b[0m`, e);
   }
 }
+
+// ─── Auto-copy cover images from CURRENT brain artifacts to public ───────────
+const CURRENT_ARTIFACTS_DIR =
+  "C:\\Users\\User\\.gemini\\antigravity-ide\\brain\\0bb0b256-eb67-4b9a-ad66-891f38c7924f";
+
+const newCoverImages = [
+  { src: "media__1783966768210.jpg", dest: "pre_formulation_cover_v2.jpg" },
+  { src: "media__1783967580482.jpg", dest: "finished_dose_cover_v2.jpg" },
+  { src: "media__1783967580514.jpg", dest: "therapeutic_areas_cover_v2.jpg" },
+];
+
+for (const { src, dest } of newCoverImages) {
+  const srcPath = path.join(CURRENT_ARTIFACTS_DIR, src);
+  const destPath = path.join(process.cwd(), "public", dest);
+  try {
+    if (fs.existsSync(srcPath)) {
+      fs.copyFileSync(srcPath, destPath);
+      console.log(`\x1b[32m✓ New cover image ready:\x1b[0m ${dest}`);
+    } else {
+      console.warn(`\x1b[33m⚠ New source not found:\x1b[0m ${srcPath}`);
+    }
+  } catch (e) {
+    console.error(`\x1b[31m✗ Failed to copy new ${dest}:\x1b[0m`, e);
+  }
+}
+// ─────────────────────────────────────────────────────────────────────────────
 // ─────────────────────────────────────────────────────────────────────────────
 
 const nextConfig: NextConfig = {

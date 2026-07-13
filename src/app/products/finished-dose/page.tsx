@@ -60,7 +60,7 @@ export default function FinishedDosePage() {
                 }}
               >
                 <Image
-                  src="/mups_development.jpg"
+                  src="/finished_dose_cover_v2.jpg"
                   alt="Finished Dose Formulations Cover"
                   fill
                   sizes="(max-width: 768px) 60vw, 55vw"
