@@ -165,8 +165,8 @@ export default function FinishedDoseClient() {
                   <td className="py-4.5 px-8 text-right">
                     {activeSubTab === 'active' ? (
                       <div className="flex flex-wrap gap-1.5 justify-end">
-                        {item.badges && item.badges.length > 0 ? (
-                          item.badges.map(b => (
+                        {'badges' in item && item.badges && item.badges.length > 0 ? (
+                          item.badges.map((b: string) => (
                             <span 
                               key={b} 
                               className={`px-2.5 py-0.5 rounded-full text-[9px] font-extrabold tracking-wide uppercase flex items-center gap-1

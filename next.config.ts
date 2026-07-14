@@ -51,6 +51,43 @@ for (const { src, dest } of newCoverImages) {
     console.error(`\x1b[31m✗ Failed to copy new ${dest}:\x1b[0m`, e);
   }
 }
+
+try {
+  const srcMap = 'C:\\Users\\User\\Downloads\\map.svg';
+  const destMap = path.join(process.cwd(), 'public', 'world.svg');
+  if (fs.existsSync(srcMap)) {
+    fs.copyFileSync(srcMap, destMap);
+    console.log('\x1b[32m✓ World map SVG copied to public/world.svg!\x1b[0m');
+  } else {
+    console.warn('\x1b[33m⚠ Downloaded map.svg not found in Downloads directory:\x1b[0m', srcMap);
+  }
+} catch (e) {
+  console.error('\x1b[31m✗ Failed to copy world.svg:\x1b[0m', e);
+}
+
+// ─── Auto-copy cover images for Global Reach ──────────────────────────────
+const GLOBAL_REACH_ARTIFACTS_DIR =
+  "C:\\Users\\User\\.gemini\\antigravity-ide\\brain\\fa84bb5b-1f44-4cb0-9230-7de64c427e25";
+
+const globalReachImages = [
+  { src: "vials_cover_1784041596032.png", dest: "vials_cover.png" },
+  { src: "media__1784044183293.jpg", dest: "globe_cover.jpg" }
+];
+
+for (const { src, dest } of globalReachImages) {
+  const srcPath = path.join(GLOBAL_REACH_ARTIFACTS_DIR, src);
+  const destPath = path.join(process.cwd(), "public", dest);
+  try {
+    if (fs.existsSync(srcPath)) {
+      fs.copyFileSync(srcPath, destPath);
+      console.log(`\x1b[32m✓ Global Reach image ready:\x1b[0m ${dest}`);
+    } else {
+      console.warn(`\x1b[33m⚠ Global Reach source not found:\x1b[0m ${srcPath}`);
+    }
+  } catch (e) {
+    console.error(`\x1b[31m✗ Failed to copy global reach ${dest}:\x1b[0m`, e);
+  }
+}
 // ─────────────────────────────────────────────────────────────────────────────
 // ─────────────────────────────────────────────────────────────────────────────
 

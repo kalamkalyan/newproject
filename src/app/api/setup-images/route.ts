@@ -33,6 +33,21 @@ export async function GET() {
       dest: path.join(publicDir, 'current_openings_cover.jpg'),
       name: 'Current Openings cover',
     },
+    {
+      src: 'C:\\Users\\User\\.gemini\\antigravity-ide\\brain\\fa84bb5b-1f44-4cb0-9230-7de64c427e25\\vials_cover_1784041596032.png',
+      dest: path.join(publicDir, 'vials_cover.png'),
+      name: 'Global Reach cover',
+    },
+    {
+      src: 'C:\\Users\\User\\Downloads\\map.svg',
+      dest: path.join(publicDir, 'world.svg'),
+      name: 'World Map SVG',
+    },
+    {
+      src: 'C:\\Users\\User\\.gemini\\antigravity-ide\\brain\\fa84bb5b-1f44-4cb0-9230-7de64c427e25\\media__1784044183293.jpg',
+      dest: path.join(publicDir, 'globe_cover.jpg'),
+      name: 'Globe Cover Image',
+    },
   ];
 
   const results: string[] = [];
